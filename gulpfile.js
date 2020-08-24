@@ -18,7 +18,7 @@ const concat = require(`gulp-concat`);
 const fileinclude = require(`gulp-file-include`);
 
 gulp.task(`html`, function () {
-  return gulp.src([`source/html/*.html`])
+  return gulp.src([`source/*.html`])
     .pipe(fileinclude({
       prefix: `@@`,
       basepath: `@root`,
@@ -82,7 +82,7 @@ gulp.task(`server`, function () {
     ui: false,
   });
 
-  gulp.watch(`source/html/**/*.html`, gulp.series(`html`, `refresh`));
+  gulp.watch(`source/**/*.html`, gulp.series(`html`, `refresh`));
   gulp.watch(`source/sass/**/*.{scss,sass}`, gulp.series(`css`));
   gulp.watch(`source/js/**/*.js`, gulp.series(`script`, `refresh`));
   gulp.watch(`source/img/**/*.svg`, gulp.series(`copysvg`, `sprite`, `html`, `refresh`));
