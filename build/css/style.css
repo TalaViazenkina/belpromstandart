@@ -386,20 +386,22 @@ img {
   margin: 0;
   padding: 0;
   list-style: none;
-  max-width: 670px; }
+  max-width: 680px; }
 
 .accordion__tab {
   position: relative;
   padding-left: 100px;
   padding-bottom: 46px; }
-  .accordion__tab--opened .accordion__tab-toggle {
-    border: none;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#e41579), to(#ff3f84));
-    background-image: linear-gradient(180deg, #e41579 0%, #ff3f84 100%); }
-    .accordion__tab--opened .accordion__tab-toggle svg {
-      fill: #ffffff;
-      -webkit-transform: rotate(45deg);
-              transform: rotate(45deg); }
+  .accordion__tab--opened {
+    padding-bottom: 38px; }
+    .accordion__tab--opened .accordion__tab-toggle {
+      border: none;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#e41579), to(#ff3f84));
+      background-image: linear-gradient(180deg, #e41579 0%, #ff3f84 100%); }
+      .accordion__tab--opened .accordion__tab-toggle svg {
+        fill: #ffffff;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg); }
 
 .accordion__tab-title {
   padding-top: 25px;
@@ -417,6 +419,9 @@ img {
   cursor: pointer;
   outline: none;
   color: inherit;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   -webkit-transition-property: background;
   transition-property: background;
   -webkit-transition-duration: 0.3s;
@@ -459,7 +464,7 @@ img {
   overflow: hidden; }
   .accordion__tab-content p {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 12px;
     -webkit-font-feature-settings: "pnum" on, "lnum" on;
             font-feature-settings: "pnum" on, "lnum" on; }
   .accordion__tab-content strong {
