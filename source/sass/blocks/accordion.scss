@@ -4,27 +4,49 @@
 }
 
 .accordion__tab {
+  min-height: 115px;
   position: relative;
   padding-left: 100px;
-  padding-bottom: 46px;
+
+
+  @include viewport--sm {
+    padding-left: 80px;
+  }
 
   &--opened {
     padding-bottom: 38px;
-   .accordion__tab-toggle {
-    border: none;
-    background-image: linear-gradient(180deg, $color-ruby 0%, $color-violet-red 100%);
 
-    svg {
-      fill: $color-default-white;
-      transform: rotate(45deg);
+    @include viewport--md {
+      padding-bottom: 15px;
     }
-   }
- }
+
+    @include viewport--sm {
+      padding-bottom: 35px;
+}
+
+    .accordion__tab-toggle {
+      border: none;
+      background-image: linear-gradient(180deg, $color-ruby 0%, $color-violet-red 100%);
+
+      svg {
+        fill: $color-default-white;
+        transform: rotate(45deg);
+      }
+    }
+  }
 }
 
 .accordion__tab-title {
   padding-top: 25px;
   padding-bottom: 25px;
+
+  @include viewport--sm {
+    display: flex;
+    align-items: center;
+    min-height: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 
   h2 {
     margin-top: 0;
@@ -48,14 +70,24 @@
   border: 1px solid $color-ruby;
   border-radius: 50%;
 
+  @include viewport--sm {
+    width: 60px;
+    height: 60px;
+  }
+
   svg {
     @include transition(transform, filter);
     fill: $color-ruby;
+
+    @include viewport--sm {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   &:hover svg,
   &:focus svg {
-    filter:  drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.6));
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.6));
   }
 }
 
@@ -67,7 +99,12 @@
   p {
     margin-top: 0;
     margin-bottom: 12px;
-    font-feature-settings: "pnum" on, "lnum" on;
+    font-feature-settings: "pnum"on, "lnum"on;
+
+    @include viewport--sm {
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
 
   strong {
@@ -75,4 +112,3 @@
     color: $color-violet-red;
   }
 }
-
