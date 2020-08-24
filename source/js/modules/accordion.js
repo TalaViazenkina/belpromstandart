@@ -28,8 +28,10 @@ export default () => {
       currentOpenedTab = tab;
       currentOpenedTabContent = tabContent;
       currentOpenedTab.classList.add('accordion__tab--opened');
+      evt.target.setAttribute('aria-label', 'Скрыть ответ');
     } else {
       currentOpenedTab.classList.remove('accordion__tab--opened');
+      evt.target.setAttribute('aria-label', 'Показать ответ');
       currentOpenedTab = null;
       currentOpenedTabContent = null;
       document.activeElement.blur();
