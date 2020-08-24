@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Accordeon тестовое задание">
   <link rel="preload" href="fonts/Raleway-Regular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fontsRaleway-Bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Raleway-Bold.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Raleway-ExtraBold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
   <title>Accordeon</title>
@@ -17,82 +17,88 @@
   <div style="display: none;">
     @@include("build/img/sprite_auto.svg")
   </div>
-  <main class="accordion-page container">
-    <h1>
-      <span class="size-xxl">Вопросы</span>
-      <span>Все что вы хотите знать</span> </h1>
-    <ul class="accordion">
-      <li class="accordion__tab">
-        <div class="accordion__tab-title">
-          <button class="accordion__tab-toggle" type="button" aria-label="Показать ответ">
-            <svg width="20" height="20" focusable="false">
-              <use xlink:href="#icon-plus"></use>
-            </svg>
-          </button>
-          <h2>Как оформить заказ? </h2>
-        </div>
-        <div class="accordion__tab-content">
-          <p>При заказе до 17:00 доставка осуществляется<strong>в день заказа</strong>. Среднее время доставки 2 часа. Доставка осуществляется до 20:00 ежедневно. Мы работаем без выходных и праздников, чтобы Вы всегда могли кушать вкусную и здоровую еду! </p>
-          <p>Доставка осуществляется <strong>бесплатно</strong> при заказе от 1500 руб. по г.Москва в пределах МКАД</p>
-        </div>
-      </li>
-      <li class="accordion__tab">
-        <div class="accordion__tab-title">
-          <button class="accordion__tab-toggle" type="button" aria-label="Показать ответ">
-            <svg width="20" height="20" focusable="false">
-              <use xlink:href="#icon-plus"></use>
-            </svg>
-          </button>
-          <h2>Как работает служба доставки?</h2>
-        </div>
-        <div class="accordion__tab-content">
-          <p>При заказе до 17:00 доставка осуществляется в день заказа. Среднее время доставки 2 часа. Доставка осуществляется до 20:00 ежедневно. Мы работаем без выходных и праздников, чтобы Вы всегда могли кушать вкусную и здоровую еду! </p>
-          <p>Доставка осуществляется бесплатно при заказе от 1500 руб. по г.Москва в пределах МКАД</p>
-        </div>
-      </li>
-      <li>
-        <div class="accordion__tab-title">
-          <button class="accordion__tab-toggle" type="button" aria-label="Показать ответ">
-            <svg width="20" height="20" focusable="false">
-              <use xlink:href="#icon-plus"></use>
-            </svg>
-          </button>
-          <h2>Условия доставки за пределами МКАД</h2>
-        </div>
-        <div class="accordion__tab-content">
-          <p>При заказе до 17:00 доставка осуществляется в день заказа. Среднее время доставки 2 часа. Доставка осуществляется до 20:00 ежедневно. Мы работаем без выходных и праздников, чтобы Вы всегда могли кушать вкусную и здоровую еду! </p>
-          <p>Доставка осуществляется бесплатно при заказе от 1500 руб. по г.Москва в пределах МКАД</p>
-        </div>
-      </li>
-      <li class="accordion__tab">
-        <div class="accordion__tab-title">
-          <button class="accordion__tab-toggle" type="button" aria-label="Показать ответ">
-            <svg width="20" height="20" focusable="false">
-              <use xlink:href="#icon-plus"></use>
-            </svg>
-          </button>
-          <h2>Какие способы оплаты у вас есть?</h2>
-        </div>
-        <div class="accordion__tab-content">
-          <p>При заказе до 17:00 доставка осуществляется в день заказа. Среднее время доставки 2 часа. Доставка осуществляется до 20:00 ежедневно. Мы работаем без выходных и праздников, чтобы Вы всегда могли кушать вкусную и здоровую еду! </p>
-          <p>Доставка осуществляется бесплатно при заказе от 1500 руб. по г.Москва в пределах МКАД</p>
-        </div>
-      </li>
-      <li class="accordion__tab">
-        <div class="accordion__tab-title">
-          <button class="accordion__tab-toggle" type="button" aria-label="Показать ответ">
-            <svg width="20" height="20" focusable="false">
-              <use xlink:href="#icon-plus"></use>
-            </svg>
-          </button>
-          <h2>У меня есть промокод, но я не понимаю как им пользоваться</h2>
-        </div>
-        <div class="accordion__tab-content">
-          <p>При заказе до 17:00 доставка осуществляется в день заказа. Среднее время доставки 2 часа. Доставка осуществляется до 20:00 ежедневно. Мы работаем без выходных и праздников, чтобы Вы всегда могли кушать вкусную и здоровую еду! </p>
-          <p>Доставка осуществляется бесплатно при заказе от 1500 руб. по г.Москва в пределах МКАД</p>
-        </div>
-      </li>
-    </ul>
+  <main class="accordion-page">
+    <div class="container">
+      <h1>
+        <span class="size-xxl">Вопросы</span>
+        <span>Все что вы хотите знать</span>
+      </h1>
+      <div class="accordion-page__bg">
+        <img src="img/broccoli@1x.png" srcset="img/broccoli@1x.png 2x" alt="Фоновое изображение">
+      </div>
+      <ul class="accordion">
+        <li class="accordion__tab">
+          <div class="accordion__tab-title">
+            <button class="accordion__tab-toggle" type="button" aria-label="Показать ответ">
+              <svg width="20" height="20" focusable="false">
+                <use xlink:href="#icon-plus"></use>
+              </svg>
+            </button>
+            <h2>Как оформить заказ? </h2>
+          </div>
+          <div class="accordion__tab-content">
+            <p>При заказе до 17:00 доставка осуществляется <strong>в день заказа</strong>. Среднее время доставки 2 часа. Доставка осуществляется до 20:00 ежедневно. Мы работаем без выходных и праздников, чтобы Вы всегда могли кушать вкусную и здоровую еду! </p>
+            <p>Доставка осуществляется <strong>бесплатно</strong> при заказе от 1500 руб. по г.Москва в пределах МКАД</p>
+          </div>
+        </li>
+        <li class="accordion__tab accordion__tab--opened">
+          <div class="accordion__tab-title">
+            <button class="accordion__tab-toggle" type="button" aria-label="Показать ответ">
+              <svg width="20" height="20" focusable="false">
+                <use xlink:href="#icon-plus"></use>
+              </svg>
+            </button>
+            <h2>Как работает служба доставки?</h2>
+          </div>
+          <div class="accordion__tab-content">
+            <p>При заказе до 17:00 доставка осуществляется <strong>в день заказа</strong>. Среднее время доставки 2 часа. Доставка осуществляется до 20:00 ежедневно. Мы работаем без выходных и праздников, чтобы Вы всегда могли кушать вкусную и здоровую еду! </p>
+            <p>Доставка осуществляется <strong>бесплатно</strong> при заказе от 1500 руб. по г.Москва в пределах МКАД</p>
+          </div>
+        </li>
+        <li class="accordion__tab">
+          <div class="accordion__tab-title">
+            <button class="accordion__tab-toggle" type="button" aria-label="Показать ответ">
+              <svg width="20" height="20" focusable="false">
+                <use xlink:href="#icon-plus"></use>
+              </svg>
+            </button>
+            <h2>Условия доставки за пределами МКАД</h2>
+          </div>
+          <div class="accordion__tab-content">
+            <p>При заказе до 17:00 доставка осуществляется в день заказа. Среднее время доставки 2 часа. Доставка осуществляется до 20:00 ежедневно. Мы работаем без выходных и праздников, чтобы Вы всегда могли кушать вкусную и здоровую еду! </p>
+            <p>Доставка осуществляется бесплатно при заказе от 1500 руб. по г.Москва в пределах МКАД</p>
+          </div>
+        </li>
+        <li class="accordion__tab">
+          <div class="accordion__tab-title">
+            <button class="accordion__tab-toggle" type="button" aria-label="Показать ответ">
+              <svg width="20" height="20" focusable="false">
+                <use xlink:href="#icon-plus"></use>
+              </svg>
+            </button>
+            <h2>Какие способы оплаты у вас есть?</h2>
+          </div>
+          <div class="accordion__tab-content">
+            <p>При заказе до 17:00 доставка осуществляется в день заказа. Среднее время доставки 2 часа. Доставка осуществляется до 20:00 ежедневно. Мы работаем без выходных и праздников, чтобы Вы всегда могли кушать вкусную и здоровую еду! </p>
+            <p>Доставка осуществляется бесплатно при заказе от 1500 руб. по г.Москва в пределах МКАД</p>
+          </div>
+        </li>
+        <li class="accordion__tab">
+          <div class="accordion__tab-title">
+            <button class="accordion__tab-toggle" type="button" aria-label="Показать ответ">
+              <svg width="20" height="20" focusable="false">
+                <use xlink:href="#icon-plus"></use>
+              </svg>
+            </button>
+            <h2>У меня есть промокод, но я не понимаю как им пользоваться</h2>
+          </div>
+          <div class="accordion__tab-content">
+            <p>При заказе до 17:00 доставка осуществляется в день заказа. Среднее время доставки 2 часа. Доставка осуществляется до 20:00 ежедневно. Мы работаем без выходных и праздников, чтобы Вы всегда могли кушать вкусную и здоровую еду! </p>
+            <p>Доставка осуществляется бесплатно при заказе от 1500 руб. по г.Москва в пределах МКАД</p>
+          </div>
+        </li>
+      </ul>
+    </div>
   </main>
 </body>
 

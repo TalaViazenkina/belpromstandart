@@ -10,11 +10,14 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   min-width: $viewport--sm;
+  min-height: 100vh;
 
   font-family: "Raleway", "Arial", sans-serif;
-  font-weight:  400;
+  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   color: $color-default-black;

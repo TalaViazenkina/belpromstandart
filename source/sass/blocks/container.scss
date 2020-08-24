@@ -1,0 +1,12 @@
+.container {
+  max-width: 1538px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  @include viewport--md {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

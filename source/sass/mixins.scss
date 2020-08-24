@@ -4,6 +4,18 @@
   }
 }
 
+@mixin viewport--md {
+  @media (max-width: $viewport--lg - 1) {
+    @content;
+  }
+}
+
+@mixin viewport--sm {
+  @media (max-width: $viewport--md - 1) {
+    @content;
+  }
+}
+
 // Сброс кастомных стилей
 @mixin list-reset {
   margin: 0;

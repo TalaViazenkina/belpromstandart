@@ -341,8 +341,16 @@ html {
   height: 100%; }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 0;
   min-width: 320px;
+  min-height: 100vh;
   font-family: "Raleway", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -373,3 +381,137 @@ img {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden; }
+
+.accordion {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-width: 670px; }
+
+.accordion__tab {
+  position: relative;
+  padding-left: 100px;
+  padding-bottom: 46px; }
+  .accordion__tab--opened .accordion__tab-toggle {
+    border: none;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#e41579), to(#ff3f84));
+    background-image: linear-gradient(180deg, #e41579 0%, #ff3f84 100%); }
+    .accordion__tab--opened .accordion__tab-toggle svg {
+      fill: #ffffff;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+
+.accordion__tab-title {
+  padding-top: 25px;
+  padding-bottom: 25px; }
+  .accordion__tab-title h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 19px; }
+
+.accordion__tab-toggle {
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: inherit;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70px;
+  height: 70px;
+  border: 1px solid #e41579;
+  border-radius: 50%; }
+  .accordion__tab-toggle svg {
+    -webkit-transition-property: -webkit-transform, -webkit-filter;
+    transition-property: -webkit-transform, -webkit-filter;
+    transition-property: transform, filter;
+    transition-property: transform, filter, -webkit-transform, -webkit-filter;
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+    fill: #e41579; }
+  .accordion__tab-toggle:hover svg,
+  .accordion__tab-toggle:focus svg {
+    -webkit-filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.6));
+            filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.6)); }
+
+.accordion__tab-content {
+  -webkit-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  height: 0;
+  overflow: hidden; }
+  .accordion__tab-content p {
+    margin-top: 0;
+    margin-bottom: 0;
+    -webkit-font-feature-settings: "pnum" on, "lnum" on;
+            font-feature-settings: "pnum" on, "lnum" on; }
+  .accordion__tab-content strong {
+    font-weight: 700;
+    color: #ff3f84; }
+
+.accordion-page {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  overflow: hidden; }
+  .accordion-page h1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 1170px;
+    margin-top: 0;
+    margin-bottom: 76px;
+    font-size: 30px;
+    line-height: 35px;
+    text-transform: uppercase;
+    text-align: center; }
+    .accordion-page h1 .size-xxl {
+      margin-bottom: 12px;
+      font-weight: 800;
+      font-size: 130px;
+      line-height: 153px;
+      color: #f6f6f6; }
+  .accordion-page .container {
+    position: relative; }
+
+.accordion-page__bg {
+  position: absolute;
+  top: 275px;
+  left: 755px;
+  width: 556px;
+  height: 656px; }
+  .accordion-page__bg img {
+    display: block;
+    width: 100%;
+    height: auto; }
+
+.container {
+  max-width: 1538px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 50px;
+  padding-right: 50px; }
+  @media (max-width: 1023px) {
+    .container {
+      padding-left: 10px;
+      padding-right: 10px; } }

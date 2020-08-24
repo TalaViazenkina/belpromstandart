@@ -1,0 +1,43 @@
+.accordion-page {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  overflow: hidden;
+
+  h1 {
+    display: flex;
+    flex-direction: column;
+    max-width: 1170px;
+    margin-top: 0;
+    margin-bottom: 76px;
+    font-size: 30px;
+    line-height: 35px;
+    text-transform: uppercase;
+    text-align: center;
+
+    .size-xxl {
+      margin-bottom: 12px;
+      font-weight: 800;
+      font-size: 130px;
+      line-height: 153px;
+      color: $color-white-smoke;
+    }
+  }
+
+  .container {
+    position: relative;
+  }
+}
+
+.accordion-page__bg {
+  position: absolute;
+  top: 275px;
+  left: 755px;
+  width: 556px;
+  height: 656px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
